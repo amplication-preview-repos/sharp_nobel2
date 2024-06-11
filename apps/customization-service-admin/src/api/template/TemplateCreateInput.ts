@@ -1,0 +1,6 @@
+export type TemplateCreateInput = {
+  css?: string | null;
+  description?: string | null;
+  html?: string | null;
+  name?: string | null;
+};
