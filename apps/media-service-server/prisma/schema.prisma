@@ -1,0 +1,18 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Media {
+  createdAt  DateTime @default(now())
+  id         String   @id @default(cuid())
+  size       Int?
+  typeField  String?
+  updatedAt  DateTime @updatedAt
+  uploadedBy String?
+  url        String?
+}
